@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 225 73% 57%;
+    --primary: 226 73% 27%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 12%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 225 73% 57%;
+    --accent: 226 73% 27%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,18 +34,18 @@ All colors MUST be HSL.
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 225 73% 57%;
+    --ring: 226 73% 27%;
 
     --radius: 0.75rem;
 
     /* Custom portfolio colors */
-    --royal-blue: 225 73% 57%;
-    --royal-blue-dark: 225 73% 47%;
-    --royal-blue-light: 225 73% 67%;
-    --gradient-primary: linear-gradient(135deg, hsl(225 73% 57%), hsl(225 73% 67%));
+    --royal-blue: 226 73% 27%;
+    --royal-blue-dark: 226 73% 17%;
+    --royal-blue-light: 226 73% 37%;
+    --gradient-primary: linear-gradient(135deg, hsl(226 73% 27%), hsl(226 73% 37%));
     --gradient-dark: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 0% 12%));
-    --glow-blue: 0 0 40px hsl(225 73% 57% / 0.3);
-    --glow-blue-strong: 0 0 60px hsl(225 73% 57% / 0.5);
+    --glow-blue: 0 0 40px hsl(226 73% 27% / 0.3);
+    --glow-blue-strong: 0 0 60px hsl(226 73% 27% / 0.5);
 
     /* Animation variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -143,7 +143,7 @@ All colors MUST be HSL.
   }
   
   .text-glow {
-    text-shadow: 0 0 20px hsl(225 73% 57% / 0.5);
+    text-shadow: 0 0 20px hsl(226 73% 27% / 0.5);
   }
 }
 

@@ -7,10 +7,13 @@ import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Form from "@/components/Form";
+import SplashCursor from "@/components/UIMaterial/SplashCursor";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SplashCursor/>
       <Navbar />
       <Hero />
       <About />
@@ -19,6 +22,7 @@ const Index = () => {
       <Projects />
       <Education />
       <Contact />
+      <Form/>
       <Footer />
     </div>
   );

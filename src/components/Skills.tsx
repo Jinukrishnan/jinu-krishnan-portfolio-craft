@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
+
 const Skills = () => {
   const skillCategories = [
     {
@@ -84,6 +85,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20 px-4 bg-secondary">
+     
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold mb-16 text-center animate-fade-in-up">
           <span className="gradient-primary bg-clip-text text-transparent">Technical Skills</span>

@@ -6,37 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    content: ''
-  });
+ 
 
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      content: ''
-    });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+ 
 
   const contactInfo = [
     {
@@ -78,7 +50,7 @@ const Contact = () => {
           <span className="gradient-primary bg-clip-text text-transparent">Get In Touch</span>
         </h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className=" max-w-6xl mx-auto">
           
           {/* Contact Information */}
           <div className="animate-slide-in-left">
@@ -90,7 +62,7 @@ const Contact = () => {
               or just having a chat about technology. Feel free to reach out!
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
                 return (
@@ -119,74 +91,7 @@ const Contact = () => {
             </div>
           </div>
           
-          {/* Contact Form */}
-          <div className="animate-slide-in-right">
-            <div className="bg-card rounded-xl p-8 border border-border glow-blue">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Send Message</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      Full Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full bg-secondary border-border focus:border-primary transition-colors"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      Email Address
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full bg-secondary border-border focus:border-primary transition-colors"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="content" className="block text-sm font-medium text-foreground mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="content"
-                    name="content"
-                    required
-                    rows={6}
-                    value={formData.content}
-                    onChange={handleChange}
-                    className="w-full bg-secondary border-border focus:border-primary transition-colors resize-none"
-                    placeholder="Tell me about your project or just say hello..."
-                  />
-                </div>
-                
-                <div className="flex justify-center">
-                  <Button 
-                    type="submit"
-                    className="w-full max-w-[60%] gradient-primary hover:opacity-90 transition-all glow-blue text-lg py-6"
-                  >
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </Button>
-                </div>
-              </form>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>

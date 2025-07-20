@@ -2,12 +2,12 @@ const About = () => {
   return (
     <section id="about" className="py-20 px-4">
       <div className="container mx-auto">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className=" max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-12 text-center animate-fade-in-up">
             <span className="gradient-primary bg-clip-text text-transparent">About Me</span>
           </h2>
           
-          <div className="bg-card rounded-2xl p-8 border border-border glow-blue animate-scale-in">
+          <div className=" bg-card rounded-2xl p-8 border border-border glow-blue animate-scale-in">
             <div className="text-lg leading-relaxed text-foreground">
               <p className="mb-6">
                 <span className="text-primary font-semibold">Versatile Full Stack Developer</span> with hands-on experience building and deploying real-world applications using{" "}
