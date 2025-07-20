@@ -30,7 +30,7 @@ const Hero = () => {
           {/* Right Side - Profile Photo */}
           <div className="flex justify-center lg:justify-end animate-slide-in-right">
             <div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-primary p-4 glow-blue-strong animate-pulse-glow">
+              <div className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-4 border-primary p-4 glow-blue-strong animate-pulse-glow">
                 <img
                   src={profilePhoto}
                   alt="Jinu Krishnan"

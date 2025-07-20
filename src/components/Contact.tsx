@@ -9,7 +9,6 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     content: ''
   });
 
@@ -28,7 +27,6 @@ const Contact = () => {
     setFormData({
       name: '',
       email: '',
-      phone: '',
       content: ''
     });
   };
@@ -85,30 +83,30 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="animate-slide-in-left">
             <h3 className="text-2xl font-bold text-foreground mb-6">
-              Let's Work Together
+              Get In Touch
             </h3>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               I'm always open to discussing new opportunities, interesting projects, 
               or just having a chat about technology. Feel free to reach out!
             </p>
             
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
                 return (
                   <div 
                     key={index}
-                    className="flex items-center group animate-fade-in-up"
+                    className="bg-card rounded-lg p-4 border border-border hover:border-primary/30 transition-colors group animate-fade-in-up"
                     style={{animationDelay: `${index * 0.1}s`}}
                   >
-                    <div className="p-3 bg-primary/10 rounded-lg border border-primary/20 mr-4 group-hover:bg-primary/20 transition-colors">
-                      <IconComponent className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">{info.label}</p>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="p-3 bg-primary/10 rounded-lg border border-primary/20 mb-3 group-hover:bg-primary/20 transition-colors">
+                        <IconComponent className="w-5 h-5 text-primary" />
+                      </div>
+                      <p className="text-xs text-muted-foreground mb-1">{info.label}</p>
                       <a 
                         href={info.href}
-                        className="text-foreground hover:text-primary transition-colors font-medium"
+                        className="text-foreground hover:text-primary transition-colors font-medium text-sm"
                         target={info.href.startsWith('http') ? '_blank' : undefined}
                         rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
@@ -119,29 +117,6 @@ const Contact = () => {
                 );
               })}
             </div>
-            
-            {/* Social Links */}
-            <div className="mt-12">
-              <h4 className="text-lg font-semibold text-foreground mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
-                <a 
-                  href="https://linkedin.com/in/jinu-krishnan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-primary/10 rounded-lg border border-primary/20 hover:bg-primary/20 transition-all hover:glow-blue group"
-                >
-                  <Linkedin className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-                </a>
-                <a 
-                  href="https://github.com/jinu-krishnan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-primary/10 rounded-lg border border-primary/20 hover:bg-primary/20 transition-all hover:glow-blue group"
-                >
-                  <Github className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-                </a>
-              </div>
-            </div>
           </div>
           
           {/* Contact Form */}
@@ -150,51 +125,38 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-foreground mb-6">Send Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Full Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full bg-secondary border-border focus:border-primary transition-colors"
-                    placeholder="Your full name"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email Address
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full bg-secondary border-border focus:border-primary transition-colors"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                    Phone Number
-                  </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full bg-secondary border-border focus:border-primary transition-colors"
-                    placeholder="+91 9876543210"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                      Full Name
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full bg-secondary border-border focus:border-primary transition-colors"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                      Email Address
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full bg-secondary border-border focus:border-primary transition-colors"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
                 </div>
                 
                 <div>
@@ -213,13 +175,15 @@ const Contact = () => {
                   />
                 </div>
                 
-                <Button 
-                  type="submit"
-                  className="w-full gradient-primary hover:opacity-90 transition-all glow-blue text-lg py-6"
-                >
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Message
-                </Button>
+                <div className="flex justify-center">
+                  <Button 
+                    type="submit"
+                    className="w-full max-w-[60%] gradient-primary hover:opacity-90 transition-all glow-blue text-lg py-6"
+                  >
+                    <Send className="w-5 h-5 mr-2" />
+                    Send Message
+                  </Button>
+                </div>
               </form>
             </div>
           </div>

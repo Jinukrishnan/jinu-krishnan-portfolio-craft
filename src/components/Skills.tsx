@@ -8,43 +8,76 @@ import {
   Smartphone,
   Globe
 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Languages & Frameworks",
       icon: Code,
-      skills: ["JavaScript", "React.js", "Express.js", "TypeScript", "Angular", "Next.js"],
+      skills: [
+        { name: "JavaScript", icon: "⚡" },
+        { name: "React.js", icon: "⚛️" },
+        { name: "Express.js", icon: "🚀" },
+        { name: "TypeScript", icon: "📘" },
+        { name: "Angular", icon: "🅰️" },
+        { name: "Next.js", icon: "▲" }
+      ],
       color: "text-blue-400"
     },
     {
       title: "Databases",
       icon: Database,
-      skills: ["MongoDB", "MySQL", "PostgreSQL"],
+      skills: [
+        { name: "MongoDB", icon: "🍃" },
+        { name: "MySQL", icon: "🐬" },
+        { name: "PostgreSQL", icon: "🐘" }
+      ],
       color: "text-green-400"
     },
     {
       title: "Dev Tools & Platforms",
       icon: Cloud,
-      skills: ["Git", "GitHub", "Docker", "AWS EC2", "Vercel"],
+      skills: [
+        { name: "Git", icon: "📚" },
+        { name: "GitHub", icon: "🐙" },
+        { name: "Docker", icon: "🐳" },
+        { name: "AWS EC2", icon: "☁️" },
+        { name: "Vercel", icon: "▲" }
+      ],
       color: "text-purple-400"
     },
     {
       title: "Authentication & Payments",
       icon: Shield,
-      skills: ["Auth0", "JWT", "Razorpay"],
+      skills: [
+        { name: "Auth0", icon: "🔐" },
+        { name: "JWT", icon: "🎫" },
+        { name: "Razorpay", icon: "💳" }
+      ],
       color: "text-red-400"
     },
     {
       title: "Frontend Tools",
       icon: Palette,
-      skills: ["Redux Toolkit", "Zustand", "Bootstrap", "Tailwind CSS", "Material UI", "ReactBits", "Shadcn"],
+      skills: [
+        { name: "Redux Toolkit", icon: "🔄" },
+        { name: "Zustand", icon: "🐻" },
+        { name: "Bootstrap", icon: "🅱️" },
+        { name: "Tailwind CSS", icon: "🎨" },
+        { name: "Material UI", icon: "📱" },
+        { name: "Shadcn", icon: "✨" }
+      ],
       color: "text-pink-400"
     },
     {
       title: "Methodologies",
       icon: Settings,
-      skills: ["Agile", "RESTful API Design", "CI/CD"],
+      skills: [
+        { name: "Agile", icon: "🏃‍♂️" },
+        { name: "RESTful API", icon: "🔗" },
+        { name: "CI/CD", icon: "🔄" }
+      ],
       color: "text-yellow-400"
     }
   ];
@@ -72,13 +105,15 @@ const Skills = () => {
                 
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <span 
-                      key={skill}
-                      className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors"
+                    <Badge 
+                      key={skill.name}
+                      variant="outline"
+                      className="bg-primary/10 border-primary/20 text-primary hover:bg-primary/20 transition-colors flex items-center gap-1"
                       style={{animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s`}}
                     >
-                      {skill}
-                    </span>
+                      <span className="text-sm">{skill.icon}</span>
+                      {skill.name}
+                    </Badge>
                   ))}
                 </div>
               </div>

@@ -8,14 +8,12 @@ const Experience = () => {
       duration: "APRIL 2023 – Present",
       location: "Full-time",
       responsibilities: [
-        "Developed and deployed real-world web applications using MERN stack for both client and academic projects, delivering scalable and maintainable solutions.",
-        "Built and integrated RESTful APIs, Razorpay payments, JWT, and Auth0 authentication for secure, scalable platforms across different domains.",
-        "Designed dynamic and responsive frontends using React.js, Tailwind CSS, and Redux Toolkit for multi-role applications such as tenant and instructor portals.",
-        "Collaborated closely with cross-functional teams in an Agile environment, contributing to planning, development, and deployment phases while ensuring code quality and timely delivery.",
-        "Develop RESTful and GraphQL APIs to facilitate seamless communication between the frontend and backend",
-        "Design, implement, and optimize MongoDB schemas for data storage and retrieval, ensuring application performance and security.",
-        "Deploy applications on cloud platforms (e.g., AWS) and ensure performance optimization, debugging, and issue resolution.",
-        "Trained interns and supported onboarding of new team members, promoting knowledge sharing and productive teamwork through collaborative sessions and mentorship."
+        "Developed and deployed real-world web applications using MERN stack for client and academic projects.",
+        "Built RESTful APIs, integrated Razorpay payments, JWT, and Auth0 authentication for secure platforms.",
+        "Designed responsive frontends using React.js, Tailwind CSS, and Redux Toolkit for multi-role applications.",
+        "Collaborated in Agile environment, ensuring code quality and timely delivery.",
+        "Optimized MongoDB schemas for performance and deployed applications on AWS.",
+        "Trained interns and supported onboarding of new team members."
       ]
     },
     {
@@ -24,11 +22,11 @@ const Experience = () => {
       duration: "APRIL 2021 - FEB 2023",
       location: "Full-time",
       responsibilities: [
-        "Design, develop, and maintain scalable web applications using JavaScript for frontend development and Django for backend development.",
-        "Create RESTful APIs with Django and integrate them seamlessly with frontend applications, ensuring optimal performance and security.",
-        "Work closely with designers, product managers, and other developers to deliver user-centric features and functionalities.",
-        "Write clean, efficient, and reusable code while identifying and resolving application issues and bottlenecks.",
-        "Keep up-to-date with the latest trends and technologies in JavaScript frameworks (e.g., React) and Django to implement modern development practices."
+        "Developed scalable web applications using JavaScript and Django.",
+        "Created RESTful APIs with Django and integrated with frontend applications.",
+        "Collaborated with designers and developers to deliver user-centric features.",
+        "Maintained clean, efficient code while resolving application issues.",
+        "Stayed updated with latest JavaScript frameworks and Django practices."
       ]
     }
   ];
