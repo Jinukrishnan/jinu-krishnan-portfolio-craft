@@ -1,5 +1,6 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import StarBorder from "./UIMaterial/StarBorder ";
 
 const Navbar = () => {
   const handleDownloadResume = () => {
@@ -22,39 +23,40 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-primary">JK</div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
-            <button 
+            <button
               onClick={() => scrollToSection('about')}
               className="  text-foreground hover:text-primary transition-smooth"
             >
               About
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('skills')}
               className="text-foreground hover:text-primary transition-smooth"
             >
               Skills
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('experience')}
               className="text-foreground hover:text-primary transition-smooth"
             >
               Experience
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('projects')}
               className="text-foreground hover:text-primary transition-smooth"
             >
               Projects
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('contact')}
               className="text-foreground hover:text-primary transition-smooth"
             >
               Contact
             </button>
           </div>
+         
 
           <Button 
             onClick={handleDownloadResume}

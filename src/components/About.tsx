@@ -1,3 +1,5 @@
+import AnimatedContent from "./UIMaterial/AnimatedContent";
+
 const About = () => {
   return (
     <section id="about" className="py-20 px-4">
@@ -6,8 +8,21 @@ const About = () => {
           <h2 className="text-4xl font-bold mb-12 text-center animate-fade-in-up">
             <span className="gradient-primary bg-clip-text text-transparent">About Me</span>
           </h2>
-          
-          <div className=" bg-card rounded-2xl p-8 border border-border glow-blue animate-scale-in">
+         
+
+<AnimatedContent
+  distance={150}
+  direction="vertical"
+  reverse={false}
+  duration={1.2}
+  ease="power3.out"
+  initialOpacity={0.0}
+  animateOpacity
+  scale={1.1}
+  threshold={0.2}
+  delay={0.3}
+>
+   <div className=" bg-card rounded-2xl p-8 border border-border glow-blue animate-scale-in">
             <div className="text-lg leading-relaxed text-foreground">
               <p className="mb-6">
                 <span className="text-primary font-semibold">Versatile Full Stack Developer</span> with hands-on experience building and deploying real-world applications using{" "}
@@ -36,6 +51,8 @@ const About = () => {
               </div>
             </div>
           </div>
+</AnimatedContent>
+         
         </div>
       </div>
     </section>
