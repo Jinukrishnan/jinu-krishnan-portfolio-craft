@@ -53,7 +53,7 @@ const Navbar = () => {
          
 
           
-          <a href="/Jinu_Krishnan_Resume.pdf"
+          <a href="/resume.pdf"
             className="gradient-primary p-3 rounded-lg hover:opacity-90 transition-smooth glow-blue "
         download>  Download Resume</a>
         </div>
