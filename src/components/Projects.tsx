@@ -2,6 +2,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import FadeContent from "./UIMaterial/FadeContent";
 
 const Projects = () => {
   const projects = [
@@ -39,10 +40,11 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <Card 
-              key={index}
-              className="bg-card border border-border glow-blue animate-fade-in-up hover:scale-105 transition-transform duration-300"
-              style={{animationDelay: `${index * 0.2}s`}}
+            key={index}
+            className="bg-card border border-border glow-blue  hover:scale-105 transition-transform duration-300"
+            // style={{animationDelay: `${index * 0.2}s`}}
             >
+              <FadeContent>
               <CardHeader>
                 <CardTitle className="text-foreground text-xl">
                   {project.title}
@@ -101,6 +103,7 @@ const Projects = () => {
                   </Button>
                 </div>
               </CardContent>
+            </FadeContent>
             </Card>
           ))}
         </div>

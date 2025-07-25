@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import AnimatedContent from "./UIMaterial/AnimatedContent";
+import FadeContent from "./UIMaterial/FadeContent";
 
 
 const Skills = () => {
@@ -17,7 +18,7 @@ const Skills = () => {
     {
       title: "Languages & Frameworks",
       icon: Code,
-      
+
       skills: [
         { name: "JavaScript", icon: "⚡" },
         { name: "React.js", icon: "⚛️" },
@@ -142,22 +143,29 @@ const Skills = () => {
         </div>
 
         {/* Additional highlights */}
+        {/* Anything placed inside this container will be fade into view */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <Globe className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">Full Stack</h4>
-            <p className="text-muted-foreground">End-to-end development expertise</p>
-          </div>
-          <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-            <Smartphone className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h4 className="text-xl font-semibold mb-2">Responsive Design</h4>
-            <p className="text-muted-foreground">Mobile-first approach</p>
-          </div>
-          <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+            <div className="text-center " style={{ animationDelay: '0.6s' }}>
+              <Globe className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-2">Full Stack</h4>
+              <p className="text-muted-foreground">End-to-end development expertise</p>
+            </div>
+          </FadeContent>
+          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+            <div className="text-center " style={{ animationDelay: '0.7s' }}>
+              <Smartphone className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-2">Responsive Design</h4>
+              <p className="text-muted-foreground">Mobile-first approach</p>
+            </div>
+          </FadeContent>
+          <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+          <div className="text-center " style={{ animationDelay: '0.8s' }}>
             <Settings className="w-12 h-12 text-primary mx-auto mb-4" />
             <h4 className="text-xl font-semibold mb-2">DevOps</h4>
             <p className="text-muted-foreground">Deployment & optimization</p>
           </div>
+          </FadeContent>
         </div>
       </div>
     </section>

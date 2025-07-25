@@ -1,4 +1,6 @@
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
+import AnimatedContent from "./UIMaterial/AnimatedContent";
+import FadeContent from "./UIMaterial/FadeContent";
 
 const Education = () => {
   const education = [
@@ -29,9 +31,10 @@ const Education = () => {
           {education.map((edu, index) => (
             <div 
               key={index}
-              className="relative pl-8 pb-8 last:pb-0 animate-slide-in-left"
+              className="relative pl-8 pb-8 last:pb-0 "
               style={{animationDelay: `${index * 0.2}s`}}
             >
+              <AnimatedContent>
               {/* Timeline line */}
               <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-primary to-transparent"></div>
               
@@ -70,12 +73,14 @@ const Education = () => {
                   </div>
                 </div>
               </div>
+              </AnimatedContent>
             </div>
           ))}
         </div>
         
         {/* Additional achievements or certifications section */}
-        <div className="mt-16 text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+        <div className="mt-16 text-center " style={{animationDelay: '0.4s'}}>
           <div className="bg-card rounded-xl p-8 border border-border max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Continuous Learning
@@ -100,6 +105,7 @@ const Education = () => {
             </div>
           </div>
         </div>
+        </FadeContent>
       </div>
     </section>
   );

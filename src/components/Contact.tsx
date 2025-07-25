@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import FadeContent from "./UIMaterial/FadeContent";
 
 const Contact = () => {
  
@@ -66,11 +67,13 @@ const Contact = () => {
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
                 return (
+                  <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                   <div 
                     key={index}
-                    className="bg-card rounded-lg p-4 border border-border hover:border-primary/30 transition-colors group animate-fade-in-up"
+                    className="bg-card rounded-lg p-4 border border-border hover:border-primary/30 transition-colors group "
                     style={{animationDelay: `${index * 0.1}s`}}
                   >
+                    
                     <div className="flex flex-col items-center text-center">
                       <div className="p-3 bg-primary/10 rounded-lg border border-primary/20 mb-3 group-hover:bg-primary/20 transition-colors">
                         <IconComponent className="w-5 h-5 text-primary" />
@@ -86,6 +89,7 @@ const Contact = () => {
                       </a>
                     </div>
                   </div>
+                    </FadeContent>
                 );
               })}
             </div>

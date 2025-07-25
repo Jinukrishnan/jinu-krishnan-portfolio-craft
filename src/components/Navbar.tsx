@@ -1,15 +1,9 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import StarBorder from "./UIMaterial/StarBorder ";
+// import StarBorder from "./UIMaterial/StarBorder ";
 
 const Navbar = () => {
-  const handleDownloadResume = () => {
-    // Create a dummy PDF download for demo purposes
-    const link = document.createElement('a');
-    link.href = '#';
-    link.download = 'Jinu_Krishnan_Resume.pdf';
-    link.click();
-  };
+
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -58,13 +52,10 @@ const Navbar = () => {
           </div>
          
 
-          <Button 
-            onClick={handleDownloadResume}
-            className="gradient-primary hover:opacity-90 transition-smooth glow-blue"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Download Resume
-          </Button>
+          
+          <a href="/assets/Jinu_Krishnan_Resume.pdf"
+            className="gradient-primary p-3 rounded-lg hover:opacity-90 transition-smooth glow-blue "
+        download>  Download Resume</a>
         </div>
       </div>
     </nav>

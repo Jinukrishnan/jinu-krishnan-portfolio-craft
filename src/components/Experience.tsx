@@ -1,6 +1,7 @@
 import { Calendar, MapPin, Briefcase } from "lucide-react";
 import ScrollStack, { ScrollStackItem } from "./UIMaterial/ScrollStack";
 import AnimatedContent from "./UIMaterial/AnimatedContent";
+import FadeContent from "./UIMaterial/FadeContent";
 
 const Experience = () => {
   const experiences = [
@@ -57,10 +58,13 @@ const Experience = () => {
  
 
 
+          <FadeContent  key={index}
+                  className="relative pl-8 pb-12 last:pb-0"
+                  blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
 
                 <div
                   key={index}
-                  className="relative pl-8 pb-12 last:pb-0 animate-slide-in-left"
+                  className="relative pl-8 pb-12 last:pb-0 "
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   {/* Timeline line */}
@@ -114,6 +118,7 @@ const Experience = () => {
                     </ul>
                   </div>
                 </div>
+                </FadeContent>
           // </AnimatedContent>
           ))}
         </div>
