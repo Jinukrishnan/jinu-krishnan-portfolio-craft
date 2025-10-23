@@ -15,14 +15,14 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "jinu.krishnan.dev@gmail.com",
-      href: "mailto:jinu.krishnan.dev@gmail.com"
+      value: "jinukrishnan.p@gmail.com",
+      href: "mailto:jinukrishnan.p@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 9876543210",
-      href: "tel:+919876543210"
+      value: "+91 9567473317",
+      href: "tel:+919567473317"
     },
     {
       icon: MapPin,
@@ -33,14 +33,14 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/jinu-krishnan",
-      href: "https://linkedin.com/in/jinu-krishnan"
+      value: "jinu krishnan",
+      href: "https://www.linkedin.com/in/jinu-krishnan-1452b0134/"
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/jinu-krishnan",
-      href: "https://github.com/jinu-krishnan"
+      value: "jinukrishnan.p",
+      href: "https://github.com/Jinukrishnan"
     }
   ];
 
