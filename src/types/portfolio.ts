@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import type { IconType } from "react-icons";
 
 export interface NavLink {
   id: string;
@@ -14,6 +15,13 @@ export interface SkillCategory {
   title: string;
   icon: LucideIcon;
   skills: Skill[];
+  color: string;
+}
+
+export interface SkillLogo {
+  name: string;
+  icon: IconType;
+  /** Brand colour shown on hover */
   color: string;
 }
 

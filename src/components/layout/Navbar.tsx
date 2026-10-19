@@ -1,4 +1,5 @@
 import { ThemeToggle } from "@/components/common";
+import StarBorder from "@/components/UIMaterial/StarBorder";
 import { navLinks, profile } from "@/data/portfolio";
 
 const Navbar = () => {
@@ -29,13 +30,16 @@ const Navbar = () => {
 
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            <a
+            <StarBorder
+              as="a"
               href={profile.resumeUrl}
-              className="gradient-primary text-white p-3 rounded-lg hover:opacity-90 transition-smooth glow-blue"
               download
+              thickness={2}
+              className="group rounded-lg glow-blue"
+              innerClassName="gradient-primary text-white p-3 rounded-lg group-hover:opacity-90 transition-smooth"
             >
               Download Resume
-            </a>
+            </StarBorder>
           </div>
         </div>
       </div>

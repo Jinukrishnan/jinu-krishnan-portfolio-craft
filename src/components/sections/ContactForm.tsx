@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Section, SurfaceCard, FormField } from "@/components/common";
 import { emailConfig } from "@/data/portfolio";
+import StarBorder from "@/components/UIMaterial/StarBorder";
 
 const initialFormData = {
   name: "",
@@ -91,14 +91,16 @@ const ContactForm = () => {
             />
           </FormField>
           <div className="flex justify-center">
-            <Button
+            <StarBorder
               type="submit"
               disabled={isSending}
-              className="w-full max-w-[60%] gradient-primary hover:opacity-90 transition-all glow-blue text-lg py-6"
+              thickness={2}
+              className="group w-full max-w-[60%] rounded-md glow-blue disabled:pointer-events-none disabled:opacity-50"
+              innerClassName="flex items-center justify-center rounded-md gradient-primary text-white text-lg font-medium py-3.5 group-hover:opacity-90 transition-all"
             >
               <Send className="w-5 h-5 mr-2" />
               {isSending ? "Sending..." : "Send Message"}
-            </Button>
+            </StarBorder>
           </div>
         </form>
       </SurfaceCard>

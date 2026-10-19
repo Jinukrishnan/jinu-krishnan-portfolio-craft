@@ -8,6 +8,7 @@ import Projects from "@/components/sections/Projects";
 import Education from "@/components/sections/Education";
 import Contact from "@/components/sections/Contact";
 import ContactForm from "@/components/sections/ContactForm";
+import SkillsMarquee from "@/components/sections/SkillsMarquee";
 import SplashCursor from "@/components/UIMaterial/SplashCursor";
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
       <Education />
       <Contact />
       <ContactForm />
+      <SkillsMarquee />
       <Footer />
     </div>
   );

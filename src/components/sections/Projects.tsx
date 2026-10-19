@@ -1,5 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import StarBorder from "@/components/UIMaterial/StarBorder";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Section, SectionTitle, TechBadge, BulletList, Reveal } from "@/components/common";
 import { projects } from "@/data/portfolio";
@@ -36,18 +36,18 @@ const Projects = () => {
 
                   <div className="flex gap-3">
                     {links.map(({ href, icon: Icon, label }) => (
-                      <Button
+                      <StarBorder
                         key={label}
-                        variant="outline"
-                        size="sm"
-                        className="border-primary/20 hover:bg-primary/10 flex-1"
-                        asChild
+                        as="a"
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex-1 rounded-md"
+                        innerClassName="flex h-9 items-center justify-center rounded-md border border-primary/20 bg-card px-3 text-sm font-medium group-hover:bg-secondary transition-colors"
                       >
-                        <a href={href} target="_blank" rel="noopener noreferrer">
-                          <Icon className="w-4 h-4 mr-2" />
-                          {label}
-                        </a>
-                      </Button>
+                        <Icon className="w-4 h-4 mr-2" />
+                        {label}
+                      </StarBorder>
                     ))}
                   </div>
                 </CardContent>
